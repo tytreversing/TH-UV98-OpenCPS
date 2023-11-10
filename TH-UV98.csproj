@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\UV98 V1.00\Uv98_SoftWare_Eng\TH-UV98.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D308FBA9-3D90-4D50-A747-1EEC0883EA84}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>TH-UV98</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>_8890DTest</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ChineseConverter">
+      <HintPath>lib\ChineseConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="RadioSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="汉字与GBK转换.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VFO_CH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DtmfMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="车台调试使用说明.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tone2Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="TongXun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestModWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChinfDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="模拟参数总体调节.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ton5Menu1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cmx138Set.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FatherWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RfRangWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="密码输入框.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="万能密码公式.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="批处理调试参数.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="编程密码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class2.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="VFO_4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="公共控件操作.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="字库IC提取数据.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="company_Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="特叫类型.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadioSYS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="编程注意事项.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegditWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChinfDetail.resx" />
+    <EmbeddedResource Include="ChInformation.resx" />
+    <EmbeddedResource Include="Cmx138Set.resx" />
+    <EmbeddedResource Include="company_Information.resx" />
+    <EmbeddedResource Include="ComSet.resx" />
+    <EmbeddedResource Include="DtmfMenu.resx" />
+    <EmbeddedResource Include="FatherWin.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="RadioSet.resx" />
+    <EmbeddedResource Include="RadioSYS.resx" />
+    <EmbeddedResource Include="RegditWin.resx" />
+    <EmbeddedResource Include="RfRangWin.resx" />
+    <EmbeddedResource Include="TestModWin.resx" />
+    <EmbeddedResource Include="Ton5Menu1.resx" />
+    <EmbeddedResource Include="Tone2Menu.resx" />
+    <EmbeddedResource Include="TongXun.resx" />
+    <EmbeddedResource Include="VFO_4.resx" />
+    <EmbeddedResource Include="VFO_CH.resx" />
+    <EmbeddedResource Include="万能密码公式.resx" />
+    <EmbeddedResource Include="公共控件操作.resx" />
+    <EmbeddedResource Include="字库IC提取数据.resx" />
+    <EmbeddedResource Include="密码输入框.resx" />
+    <EmbeddedResource Include="批处理调试参数.resx" />
+    <EmbeddedResource Include="模拟参数总体调节.resx" />
+    <EmbeddedResource Include="汉字与GBK转换.resx" />
+    <EmbeddedResource Include="特叫类型.resx" />
+    <EmbeddedResource Include="编程密码.resx" />
+    <EmbeddedResource Include="编程注意事项.resx" />
+    <EmbeddedResource Include="车台调试使用说明.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pictureBoxImag.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
