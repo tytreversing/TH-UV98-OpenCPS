@@ -14,7 +14,7 @@ namespace _8890DTest
   public class ChinfDetail : Form
   {
     public int GiCurrentCh = 3;
-    public string GiFileName1 = "8890D_TempFile.icf";
+    public string GiFileName1 = "TempFile.icf";
     public static string[,] lableArrName = new string[2, 15]
     {
       {
@@ -473,7 +473,6 @@ namespace _8890DTest
 
     private void ChinfDetail_Load(object sender, EventArgs e)
     {
-      this.Icon = new Icon(Class1.MainFilePath + "logo.ico");
       this.SetContrlAs_arrPro();
       this.GbChChangeen = false;
       this.GbFirDisEn = true;
@@ -1014,443 +1013,587 @@ namespace _8890DTest
 
     private void InitializeComponent()
     {
-      this.groupBox3 = new GroupBox();
-      this.label22 = new Label();
-      this.comboBox13 = new ComboBox();
-      this.button2 = new Button();
-      this.comboBox12 = new ComboBox();
-      this.button1 = new Button();
-      this.label18 = new Label();
-      this.numericUpDown1 = new NumericUpDown();
-      this.groupBox2 = new GroupBox();
-      this.checkBox6 = new CheckBox();
-      this.comboBox9 = new ComboBox();
-      this.label13 = new Label();
-      this.label21 = new Label();
-      this.label23 = new Label();
-      this.comboBox14 = new ComboBox();
-      this.comboBox11 = new ComboBox();
-      this.comboBox10 = new ComboBox();
-      this.label12 = new Label();
-      this.label6 = new Label();
-      this.comboBox8 = new ComboBox();
-      this.label15 = new Label();
-      this.checkBox5 = new CheckBox();
-      this.checkBox4 = new CheckBox();
-      this.checkBox3 = new CheckBox();
-      this.checkBox2 = new CheckBox();
-      this.checkBox1 = new CheckBox();
-      this.groupBox1 = new GroupBox();
-      this.label2 = new Label();
-      this.label1 = new Label();
-      this.label3 = new Label();
-      this.label4 = new Label();
-      this.comboBox6 = new ComboBox();
-      this.comboBox7 = new ComboBox();
-      this.label5 = new Label();
-      this.comboBox5 = new ComboBox();
-      this.label7 = new Label();
-      this.comboBox4 = new ComboBox();
-      this.label8 = new Label();
-      this.comboBox3 = new ComboBox();
-      this.label9 = new Label();
-      this.comboBox2 = new ComboBox();
-      this.label10 = new Label();
-      this.comboBox1 = new ComboBox();
-      this.label11 = new Label();
-      this.textBox3 = new TextBox();
-      this.textBox1 = new TextBox();
-      this.textBox2 = new TextBox();
-      this.groupBox3.SuspendLayout();
-      this.numericUpDown1.BeginInit();
-      this.groupBox2.SuspendLayout();
-      this.groupBox1.SuspendLayout();
-      this.SuspendLayout();
-      this.groupBox3.Controls.Add((Control) this.label22);
-      this.groupBox3.Controls.Add((Control) this.comboBox13);
-      this.groupBox3.Controls.Add((Control) this.button2);
-      this.groupBox3.Controls.Add((Control) this.comboBox12);
-      this.groupBox3.Controls.Add((Control) this.button1);
-      this.groupBox3.Controls.Add((Control) this.label18);
-      this.groupBox3.Controls.Add((Control) this.numericUpDown1);
-      this.groupBox3.Controls.Add((Control) this.groupBox2);
-      this.groupBox3.Controls.Add((Control) this.groupBox1);
-      this.groupBox3.Location = new Point(0, 0);
-      this.groupBox3.Name = "groupBox3";
-      this.groupBox3.Size = new Size(457, 446);
-      this.groupBox3.TabIndex = 41;
-      this.groupBox3.TabStop = false;
-      this.groupBox3.Text = "信道信息";
-      this.groupBox3.Enter += new EventHandler(this.groupBox3_Enter);
-      this.label22.AutoSize = true;
-      this.label22.Location = new Point(279, 33);
-      this.label22.Name = "label22";
-      this.label22.Size = new Size(47, 12);
-      this.label22.TabIndex = 41;
-      this.label22.Text = "DCS方向";
-      this.label22.Visible = false;
-      this.comboBox13.FormattingEnabled = true;
-      this.comboBox13.Location = new Point(332, 33);
-      this.comboBox13.Name = "comboBox13";
-      this.comboBox13.Size = new Size(100, 20);
-      this.comboBox13.TabIndex = 42;
-      this.comboBox13.Visible = false;
-      this.button2.Location = new Point(350, 396);
-      this.button2.Name = "button2";
-      this.button2.Size = new Size(75, 41);
-      this.button2.TabIndex = 45;
-      this.button2.Text = "取消";
-      this.button2.UseVisualStyleBackColor = true;
-      this.button2.Click += new EventHandler(this.button2_Click);
-      this.comboBox12.FormattingEnabled = true;
-      this.comboBox12.Location = new Point(23, 25);
-      this.comboBox12.Name = "comboBox12";
-      this.comboBox12.Size = new Size(100, 20);
-      this.comboBox12.TabIndex = 38;
-      this.comboBox12.Visible = false;
-      this.comboBox12.SelectedIndexChanged += new EventHandler(this.comboBox12_SelectedIndexChanged);
-      this.button1.Location = new Point(256, 396);
-      this.button1.Name = "button1";
-      this.button1.Size = new Size(73, 41);
-      this.button1.TabIndex = 44;
-      this.button1.Text = "确定";
-      this.button1.UseVisualStyleBackColor = true;
-      this.button1.Click += new EventHandler(this.button1_Click);
-      this.label18.AutoSize = true;
-      this.label18.Location = new Point(168, 33);
-      this.label18.Name = "label18";
-      this.label18.Size = new Size(47, 12);
-      this.label18.TabIndex = 43;
-      this.label18.Text = "信道号:";
-      this.numericUpDown1.Enabled = false;
-      this.numericUpDown1.ImeMode = ImeMode.NoControl;
-      this.numericUpDown1.InterceptArrowKeys = false;
-      this.numericUpDown1.Location = new Point(221, 31);
-      this.numericUpDown1.Maximum = new Decimal(new int[4]
-      {
-        (int) sbyte.MaxValue,
-        0,
-        0,
-        0
-      });
-      this.numericUpDown1.Name = "numericUpDown1";
-      this.numericUpDown1.Size = new Size(47, 21);
-      this.numericUpDown1.TabIndex = 38;
-      this.numericUpDown1.Value = new Decimal(new int[4]
-      {
-        1,
-        0,
-        0,
-        0
-      });
-      this.numericUpDown1.ValueChanged += new EventHandler(this.numericUpDown1_ValueChanged);
-      this.groupBox2.Controls.Add((Control) this.checkBox6);
-      this.groupBox2.Controls.Add((Control) this.comboBox9);
-      this.groupBox2.Controls.Add((Control) this.label13);
-      this.groupBox2.Controls.Add((Control) this.label21);
-      this.groupBox2.Controls.Add((Control) this.label23);
-      this.groupBox2.Controls.Add((Control) this.comboBox14);
-      this.groupBox2.Controls.Add((Control) this.comboBox11);
-      this.groupBox2.Controls.Add((Control) this.comboBox10);
-      this.groupBox2.Controls.Add((Control) this.label12);
-      this.groupBox2.Controls.Add((Control) this.label6);
-      this.groupBox2.Controls.Add((Control) this.comboBox8);
-      this.groupBox2.Controls.Add((Control) this.label15);
-      this.groupBox2.Controls.Add((Control) this.checkBox5);
-      this.groupBox2.Controls.Add((Control) this.checkBox4);
-      this.groupBox2.Controls.Add((Control) this.checkBox3);
-      this.groupBox2.Controls.Add((Control) this.checkBox2);
-      this.groupBox2.Controls.Add((Control) this.checkBox1);
-      this.groupBox2.Location = new Point(231, 58);
-      this.groupBox2.Name = "groupBox2";
-      this.groupBox2.Size = new Size(219, 323);
-      this.groupBox2.TabIndex = 42;
-      this.groupBox2.TabStop = false;
-      this.checkBox6.AutoSize = true;
-      this.checkBox6.Location = new Point(29, 283);
-      this.checkBox6.Name = "checkBox6";
-      this.checkBox6.Size = new Size(90, 16);
-      this.checkBox6.TabIndex = 43;
-      this.checkBox6.Text = "接收GPS信息";
-      this.checkBox6.UseVisualStyleBackColor = true;
-      this.checkBox6.CheckedChanged += new EventHandler(this.checkBox6_CheckedChanged);
-      this.comboBox9.FormattingEnabled = true;
-      this.comboBox9.Location = new Point(95, 134);
-      this.comboBox9.Name = "comboBox9";
-      this.comboBox9.Size = new Size(100, 20);
-      this.comboBox9.TabIndex = 38;
-      this.comboBox9.Visible = false;
-      this.comboBox9.SelectedIndexChanged += new EventHandler(this.comboBox9_SelectedIndexChanged);
-      this.label13.AutoSize = true;
-      this.label13.Location = new Point(18, 142);
-      this.label13.Name = "label13";
-      this.label13.Size = new Size(71, 12);
-      this.label13.TabIndex = 12;
-      this.label13.Text = "5TONE PTTID";
-      this.label13.Visible = false;
-      this.label21.AutoSize = true;
-      this.label21.Location = new Point(48, -37);
-      this.label21.Name = "label21";
-      this.label21.Size = new Size(65, 12);
-      this.label21.TabIndex = 37;
-      this.label21.Text = "亚音频方式";
-      this.label21.Visible = false;
-      this.label23.AutoSize = true;
-      this.label23.Location = new Point(36, 116);
-      this.label23.Name = "label23";
-      this.label23.Size = new Size(53, 12);
-      this.label23.TabIndex = 41;
-      this.label23.Text = "扰频信道";
-      this.comboBox14.FormattingEnabled = true;
-      this.comboBox14.Location = new Point(95, 108);
-      this.comboBox14.Name = "comboBox14";
-      this.comboBox14.Size = new Size(100, 20);
-      this.comboBox14.TabIndex = 42;
-      this.comboBox14.Visible = false;
-      this.comboBox14.SelectedIndexChanged += new EventHandler(this.comboBox14_SelectedIndexChanged);
-      this.comboBox11.FormattingEnabled = true;
-      this.comboBox11.Location = new Point(95, 79);
-      this.comboBox11.Name = "comboBox11";
-      this.comboBox11.Size = new Size(100, 20);
-      this.comboBox11.TabIndex = 40;
-      this.comboBox11.SelectedIndexChanged += new EventHandler(this.comboBox11_SelectedIndexChanged);
-      this.comboBox10.FormattingEnabled = true;
-      this.comboBox10.Location = new Point(95, 50);
-      this.comboBox10.Name = "comboBox10";
-      this.comboBox10.Size = new Size(100, 20);
-      this.comboBox10.TabIndex = 39;
-      this.comboBox10.SelectedIndexChanged += new EventHandler(this.comboBox10_SelectedIndexChanged);
-      this.label12.AutoSize = true;
-      this.label12.Location = new Point(24, 29);
-      this.label12.Name = "label12";
-      this.label12.Size = new Size(65, 12);
-      this.label12.TabIndex = 11;
-      this.label12.Text = "DTMF PTTID";
-      this.label6.AutoSize = true;
-      this.label6.Location = new Point(60, 87);
-      this.label6.Name = "label6";
-      this.label6.Size = new Size(29, 12);
-      this.label6.TabIndex = 5;
-      this.label6.Text = "扫描";
-      this.comboBox8.FormattingEnabled = true;
-      this.comboBox8.Location = new Point(95, 21);
-      this.comboBox8.Name = "comboBox8";
-      this.comboBox8.Size = new Size(100, 20);
-      this.comboBox8.TabIndex = 37;
-      this.comboBox8.SelectedIndexChanged += new EventHandler(this.comboBox8_SelectedIndexChanged);
-      this.label15.AutoSize = true;
-      this.label15.Location = new Point(36, 58);
-      this.label15.Name = "label15";
-      this.label15.Size = new Size(53, 12);
-      this.label15.TabIndex = 14;
-      this.label15.Text = "遇忙禁发";
-      this.checkBox5.AutoSize = true;
-      this.checkBox5.Location = new Point(29, 254);
-      this.checkBox5.Name = "checkBox5";
-      this.checkBox5.Size = new Size(90, 16);
-      this.checkBox5.TabIndex = 24;
-      this.checkBox5.Text = "发射GPS信息";
-      this.checkBox5.UseVisualStyleBackColor = true;
-      this.checkBox5.CheckedChanged += new EventHandler(this.checkBox5_CheckedChanged);
-      this.checkBox4.AutoSize = true;
-      this.checkBox4.Location = new Point(33, 225);
-      this.checkBox4.Name = "checkBox4";
-      this.checkBox4.Size = new Size(72, 16);
-      this.checkBox4.TabIndex = 23;
-      this.checkBox4.Text = "发射禁止";
-      this.checkBox4.UseVisualStyleBackColor = true;
-      this.checkBox4.CheckedChanged += new EventHandler(this.checkBox4_CheckedChanged);
-      this.checkBox3.AutoSize = true;
-      this.checkBox3.Location = new Point(119, 198);
-      this.checkBox3.Name = "checkBox3";
-      this.checkBox3.Size = new Size(48, 16);
-      this.checkBox3.TabIndex = 22;
-      this.checkBox3.Text = "倒频";
-      this.checkBox3.UseVisualStyleBackColor = true;
-      this.checkBox3.CheckedChanged += new EventHandler(this.checkBox3_CheckedChanged);
-      this.checkBox2.AutoSize = true;
-      this.checkBox2.Location = new Point(33, 196);
-      this.checkBox2.Name = "checkBox2";
-      this.checkBox2.Size = new Size(54, 16);
-      this.checkBox2.TabIndex = 21;
-      this.checkBox2.Text = "脱 网";
-      this.checkBox2.UseVisualStyleBackColor = true;
-      this.checkBox2.CheckedChanged += new EventHandler(this.checkBox2_CheckedChanged);
-      this.checkBox1.AutoSize = true;
-      this.checkBox1.Location = new Point(119, 225);
-      this.checkBox1.Name = "checkBox1";
-      this.checkBox1.Size = new Size(48, 16);
-      this.checkBox1.TabIndex = 20;
-      this.checkBox1.Text = "扰频";
-      this.checkBox1.UseVisualStyleBackColor = true;
-      this.checkBox1.Visible = false;
-      this.groupBox1.Controls.Add((Control) this.label2);
-      this.groupBox1.Controls.Add((Control) this.label1);
-      this.groupBox1.Controls.Add((Control) this.label3);
-      this.groupBox1.Controls.Add((Control) this.label4);
-      this.groupBox1.Controls.Add((Control) this.comboBox6);
-      this.groupBox1.Controls.Add((Control) this.comboBox7);
-      this.groupBox1.Controls.Add((Control) this.label5);
-      this.groupBox1.Controls.Add((Control) this.comboBox5);
-      this.groupBox1.Controls.Add((Control) this.label7);
-      this.groupBox1.Controls.Add((Control) this.comboBox4);
-      this.groupBox1.Controls.Add((Control) this.label8);
-      this.groupBox1.Controls.Add((Control) this.comboBox3);
-      this.groupBox1.Controls.Add((Control) this.label9);
-      this.groupBox1.Controls.Add((Control) this.comboBox2);
-      this.groupBox1.Controls.Add((Control) this.label10);
-      this.groupBox1.Controls.Add((Control) this.comboBox1);
-      this.groupBox1.Controls.Add((Control) this.label11);
-      this.groupBox1.Controls.Add((Control) this.textBox3);
-      this.groupBox1.Controls.Add((Control) this.textBox1);
-      this.groupBox1.Controls.Add((Control) this.textBox2);
-      this.groupBox1.Location = new Point(0, 58);
-      this.groupBox1.Name = "groupBox1";
-      this.groupBox1.Size = new Size(225, 376);
-      this.groupBox1.TabIndex = 41;
-      this.groupBox1.TabStop = false;
-      this.label2.AutoSize = true;
-      this.label2.Location = new Point(46, 53);
-      this.label2.Name = "label2";
-      this.label2.Size = new Size(53, 12);
-      this.label2.TabIndex = 1;
-      this.label2.Text = "发射频率";
-      this.label1.AutoSize = true;
-      this.label1.Location = new Point(46, 17);
-      this.label1.Name = "label1";
-      this.label1.Size = new Size(53, 12);
-      this.label1.TabIndex = 0;
-      this.label1.Text = "接收频率";
-      this.label3.AutoSize = true;
-      this.label3.Location = new Point(46, 125);
-      this.label3.Name = "label3";
-      this.label3.Size = new Size(53, 12);
-      this.label3.TabIndex = 2;
-      this.label3.Text = "接收亚音";
-      this.label4.AutoSize = true;
-      this.label4.Location = new Point(46, 168);
-      this.label4.Name = "label4";
-      this.label4.Size = new Size(53, 12);
-      this.label4.TabIndex = 3;
-      this.label4.Text = "发射亚音";
-      this.comboBox6.FormattingEnabled = true;
-      this.comboBox6.Location = new Point(105, 300);
-      this.comboBox6.Name = "comboBox6";
-      this.comboBox6.Size = new Size(100, 20);
-      this.comboBox6.TabIndex = 35;
-      this.comboBox6.SelectedIndexChanged += new EventHandler(this.comboBox6_SelectedIndexChanged);
-      this.comboBox7.FormattingEnabled = true;
-      this.comboBox7.Location = new Point(105, 335);
-      this.comboBox7.Name = "comboBox7";
-      this.comboBox7.Size = new Size(100, 20);
-      this.comboBox7.TabIndex = 36;
-      this.comboBox7.Visible = false;
-      this.comboBox7.SelectedIndexChanged += new EventHandler(this.comboBox7_SelectedIndexChanged);
-      this.label5.AutoSize = true;
-      this.label5.Location = new Point(64, 197);
-      this.label5.Name = "label5";
-      this.label5.Size = new Size(35, 12);
-      this.label5.TabIndex = 4;
-      this.label5.Text = " 功率";
-      this.comboBox5.FormattingEnabled = true;
-      this.comboBox5.Location = new Point(105, 265);
-      this.comboBox5.Name = "comboBox5";
-      this.comboBox5.Size = new Size(100, 20);
-      this.comboBox5.TabIndex = 34;
-      this.comboBox5.SelectedIndexChanged += new EventHandler(this.comboBox5_SelectedIndexChanged);
-      this.label7.AutoSize = true;
-      this.label7.Location = new Point(70, 233);
-      this.label7.Name = "label7";
-      this.label7.Size = new Size(29, 12);
-      this.label7.TabIndex = 6;
-      this.label7.Text = "步进";
-      this.comboBox4.FormattingEnabled = true;
-      this.comboBox4.Location = new Point(105, 230);
-      this.comboBox4.Name = "comboBox4";
-      this.comboBox4.Size = new Size(100, 20);
-      this.comboBox4.TabIndex = 33;
-      this.comboBox4.SelectedIndexChanged += new EventHandler(this.comboBox4_SelectedIndexChanged);
-      this.label8.AutoSize = true;
-      this.label8.Location = new Point(64, 268);
-      this.label8.Name = "label8";
-      this.label8.Size = new Size(35, 12);
-      this.label8.TabIndex = 7;
-      this.label8.Text = " 带宽";
-      this.comboBox3.FormattingEnabled = true;
-      this.comboBox3.Location = new Point(105, 195);
-      this.comboBox3.Name = "comboBox3";
-      this.comboBox3.Size = new Size(100, 20);
-      this.comboBox3.TabIndex = 32;
-      this.comboBox3.SelectedIndexChanged += new EventHandler(this.comboBox3_SelectedIndexChanged);
-      this.label9.AutoSize = true;
-      this.label9.Location = new Point(46, 305);
-      this.label9.Name = "label9";
-      this.label9.Size = new Size(53, 12);
-      this.label9.TabIndex = 8;
-      this.label9.Text = "可选信令";
-      this.comboBox2.FormattingEnabled = true;
-      this.comboBox2.Location = new Point(105, 160);
-      this.comboBox2.Name = "comboBox2";
-      this.comboBox2.Size = new Size(100, 20);
-      this.comboBox2.TabIndex = 31;
-      this.comboBox2.SelectedIndexChanged += new EventHandler(this.comboBox2_SelectedIndexChanged);
-      this.comboBox2.Click += new EventHandler(this.comboBox2_Click);
-      this.label10.AutoSize = true;
-      this.label10.Location = new Point(46, 341);
-      this.label10.Name = "label10";
-      this.label10.Size = new Size(53, 12);
-      this.label10.TabIndex = 9;
-      this.label10.Text = "静噪模式";
-      this.label10.Visible = false;
-      this.comboBox1.FormattingEnabled = true;
-      this.comboBox1.Location = new Point(105, 125);
-      this.comboBox1.Name = "comboBox1";
-      this.comboBox1.Size = new Size(100, 20);
-      this.comboBox1.TabIndex = 30;
-      this.comboBox1.SelectedIndexChanged += new EventHandler(this.comboBox1_SelectedIndexChanged);
-      this.comboBox1.Click += new EventHandler(this.comboBox1_Click);
-      this.label11.AutoSize = true;
-      this.label11.Location = new Point(46, 89);
-      this.label11.Name = "label11";
-      this.label11.Size = new Size(53, 12);
-      this.label11.TabIndex = 10;
-      this.label11.Text = "信道名称";
-      this.textBox3.Location = new Point(105, 89);
-      this.textBox3.Name = "textBox3";
-      this.textBox3.Size = new Size(100, 21);
-      this.textBox3.TabIndex = 29;
-      this.textBox3.Leave += new EventHandler(this.textBox3_Leave);
-      this.textBox3.KeyPress += new KeyPressEventHandler(this.textBox3_KeyPress);
-      this.textBox3.Enter += new EventHandler(this.textBox3_Enter);
-      this.textBox1.Location = new Point(105, 17);
-      this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new Size(100, 21);
-      this.textBox1.TabIndex = 27;
-      this.textBox1.Leave += new EventHandler(this.textBox1_Leave);
-      this.textBox1.KeyPress += new KeyPressEventHandler(this.textBox1_KeyPress);
-      this.textBox1.Enter += new EventHandler(this.textBox1_Enter);
-      this.textBox2.Location = new Point(105, 53);
-      this.textBox2.Name = "textBox2";
-      this.textBox2.Size = new Size(100, 21);
-      this.textBox2.TabIndex = 28;
-      this.textBox2.Leave += new EventHandler(this.textBox2_Leave);
-      this.textBox2.KeyPress += new KeyPressEventHandler(this.textBox2_KeyPress);
-      this.textBox2.Enter += new EventHandler(this.textBox2_Enter);
-      this.AutoScaleDimensions = new SizeF(6f, 12f);
-      this.AutoScaleMode = AutoScaleMode.Font;
-      this.ClientSize = new Size(462, 449);
-      this.Controls.Add((Control) this.groupBox3);
-      this.Name = nameof (ChinfDetail);
-      this.Text = "Channel Detail";
-      this.Load += new EventHandler(this.ChinfDetail_Load);
-      this.groupBox3.ResumeLayout(false);
-      this.groupBox3.PerformLayout();
-      this.numericUpDown1.EndInit();
-      this.groupBox2.ResumeLayout(false);
-      this.groupBox2.PerformLayout();
-      this.groupBox1.ResumeLayout(false);
-      this.groupBox1.PerformLayout();
-      this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChinfDetail));
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label22);
+            this.groupBox3.Controls.Add(this.comboBox13);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Controls.Add(this.comboBox12);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.label18);
+            this.groupBox3.Controls.Add(this.numericUpDown1);
+            this.groupBox3.Controls.Add(this.groupBox2);
+            this.groupBox3.Controls.Add(this.groupBox1);
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(513, 483);
+            this.groupBox3.TabIndex = 41;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "信道信息";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(279, 36);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(53, 13);
+            this.label22.TabIndex = 41;
+            this.label22.Text = "DCS方向";
+            this.label22.Visible = false;
+            // 
+            // comboBox13
+            // 
+            this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Location = new System.Drawing.Point(332, 36);
+            this.comboBox13.Name = "comboBox13";
+            this.comboBox13.Size = new System.Drawing.Size(100, 21);
+            this.comboBox13.TabIndex = 42;
+            this.comboBox13.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(350, 429);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 44);
+            this.button2.TabIndex = 45;
+            this.button2.Text = "取消";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // comboBox12
+            // 
+            this.comboBox12.FormattingEnabled = true;
+            this.comboBox12.Location = new System.Drawing.Point(23, 27);
+            this.comboBox12.Name = "comboBox12";
+            this.comboBox12.Size = new System.Drawing.Size(100, 21);
+            this.comboBox12.TabIndex = 38;
+            this.comboBox12.Visible = false;
+            this.comboBox12.SelectedIndexChanged += new System.EventHandler(this.comboBox12_SelectedIndexChanged);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(256, 429);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(73, 44);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "确定";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(168, 36);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(46, 13);
+            this.label18.TabIndex = 43;
+            this.label18.Text = "信道号:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Enabled = false;
+            this.numericUpDown1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.numericUpDown1.InterceptArrowKeys = false;
+            this.numericUpDown1.Location = new System.Drawing.Point(221, 34);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            127,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(47, 20);
+            this.numericUpDown1.TabIndex = 38;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.checkBox6);
+            this.groupBox2.Controls.Add(this.comboBox9);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.comboBox14);
+            this.groupBox2.Controls.Add(this.comboBox11);
+            this.groupBox2.Controls.Add(this.comboBox10);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.comboBox8);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.checkBox5);
+            this.groupBox2.Controls.Add(this.checkBox4);
+            this.groupBox2.Controls.Add(this.checkBox3);
+            this.groupBox2.Controls.Add(this.checkBox2);
+            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Location = new System.Drawing.Point(231, 63);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(267, 350);
+            this.groupBox2.TabIndex = 42;
+            this.groupBox2.TabStop = false;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(29, 307);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(96, 17);
+            this.checkBox6.TabIndex = 43;
+            this.checkBox6.Text = "接收GPS信息";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(144, 146);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(100, 21);
+            this.comboBox9.TabIndex = 38;
+            this.comboBox9.Visible = false;
+            this.comboBox9.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(58, 149);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(78, 13);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "5TONE PTTID";
+            this.label13.Visible = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(48, -40);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(67, 13);
+            this.label21.TabIndex = 37;
+            this.label21.Text = "亚音频方式";
+            this.label21.Visible = false;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(36, 126);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(55, 13);
+            this.label23.TabIndex = 41;
+            this.label23.Text = "扰频信道";
+            // 
+            // comboBox14
+            // 
+            this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Location = new System.Drawing.Point(144, 118);
+            this.comboBox14.Name = "comboBox14";
+            this.comboBox14.Size = new System.Drawing.Size(100, 21);
+            this.comboBox14.TabIndex = 42;
+            this.comboBox14.Visible = false;
+            this.comboBox14.SelectedIndexChanged += new System.EventHandler(this.comboBox14_SelectedIndexChanged);
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Location = new System.Drawing.Point(144, 86);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(100, 21);
+            this.comboBox11.TabIndex = 40;
+            this.comboBox11.SelectedIndexChanged += new System.EventHandler(this.comboBox11_SelectedIndexChanged);
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Location = new System.Drawing.Point(144, 54);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(100, 21);
+            this.comboBox10.TabIndex = 39;
+            this.comboBox10.SelectedIndexChanged += new System.EventHandler(this.comboBox10_SelectedIndexChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(64, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(72, 13);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "DTMF PTTID";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(60, 94);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "扫描";
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(144, 27);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(100, 21);
+            this.comboBox8.TabIndex = 37;
+            this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoEllipsis = true;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(18, 57);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(118, 13);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Блокировка передачи";
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(29, 275);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(96, 17);
+            this.checkBox5.TabIndex = 24;
+            this.checkBox5.Text = "发射GPS信息";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(33, 244);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(74, 17);
+            this.checkBox4.TabIndex = 23;
+            this.checkBox4.Text = "发射禁止";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(119, 215);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(50, 17);
+            this.checkBox3.TabIndex = 22;
+            this.checkBox3.Text = "倒频";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(33, 212);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(53, 17);
+            this.checkBox2.TabIndex = 21;
+            this.checkBox2.Text = "脱 网";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(119, 244);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(50, 17);
+            this.checkBox1.TabIndex = 20;
+            this.checkBox1.Text = "扰频";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.comboBox6);
+            this.groupBox1.Controls.Add(this.comboBox7);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.comboBox5);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.comboBox4);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Location = new System.Drawing.Point(0, 63);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(225, 407);
+            this.groupBox1.TabIndex = 41;
+            this.groupBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(46, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "发射频率";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(46, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "接收频率";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(46, 135);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "接收亚音";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(46, 182);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "发射亚音";
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(105, 325);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(100, 21);
+            this.comboBox6.TabIndex = 35;
+            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Location = new System.Drawing.Point(105, 363);
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(100, 21);
+            this.comboBox7.TabIndex = 36;
+            this.comboBox7.Visible = false;
+            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(64, 213);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = " 功率";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(105, 287);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(100, 21);
+            this.comboBox5.TabIndex = 34;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(70, 252);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "步进";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(105, 249);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(100, 21);
+            this.comboBox4.TabIndex = 33;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(64, 290);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 7;
+            this.label8.Text = " 带宽";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(105, 211);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(100, 21);
+            this.comboBox3.TabIndex = 32;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(46, 330);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "可选信令";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(105, 173);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(100, 21);
+            this.comboBox2.TabIndex = 31;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(46, 369);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 13);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "静噪模式";
+            this.label10.Visible = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(105, 135);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 30;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(46, 96);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "信道名称";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(105, 96);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 29;
+            this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(105, 18);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 27;
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(105, 57);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 28;
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+            // 
+            // ChinfDetail
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(523, 486);
+            this.Controls.Add(this.groupBox3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "ChinfDetail";
+            this.Text = "Настройки канала";
+            this.Load += new System.EventHandler(this.ChinfDetail_Load);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
     }
   }
 }
