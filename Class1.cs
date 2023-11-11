@@ -851,7 +851,7 @@ namespace _8890DTest
     };
     public static string[] ScrChSet = new string[10]
     {
-      "OFF",
+      "Выкл",
       "01",
       "02",
       "03",
@@ -1022,9 +1022,9 @@ namespace _8890DTest
         "低"
       },
       {
-        "Hig",
-        "Mid",
-        "Low"
+        "Высокая",
+        "Средняя",
+        "Низкая"
       }
     };
     public static string[,] WideNar_EngCh = new string[2, 3]
@@ -1035,9 +1035,9 @@ namespace _8890DTest
         "窄"
       },
       {
-        "Wide",
-        "Mid",
-        "Narrow"
+        "Широкая",
+        "Средняя",
+        "Узкая"
       }
     };
     public static string[,] PttTxKind_EngCh = new string[2, 2]
@@ -1098,9 +1098,9 @@ namespace _8890DTest
         "载波"
       },
       {
-        "OFF",
-        "Sub",
-        "Carrier"
+        "Выкл.",
+        "Субтон",
+        "Несущая"
       }
     };
     public static string[,] ScanSkip_EngCh = new string[2, 2]
@@ -1123,7 +1123,7 @@ namespace _8890DTest
         "5TONE"
       },
       {
-        "OFF",
+        "Выкл.",
         "DTMF",
         "2TONE",
         "5TONE"
@@ -1143,7 +1143,7 @@ namespace _8890DTest
         "8"
       },
       {
-        "OFF",
+        "Выкл.",
         "1",
         "2",
         "3",
@@ -1162,9 +1162,9 @@ namespace _8890DTest
         "名称"
       },
       {
-        "Frequency",
-        "Chanel",
-        "Name"
+        "Частота",
+        "Номер канала",
+        "Имя"
       }
     };
     public static string[,] SubMainDis_EngCh = new string[2, 3]

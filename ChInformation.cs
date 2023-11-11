@@ -24,60 +24,7 @@ namespace _8890DTest
     private DtmfMenu DtmfWin = new DtmfMenu();
     private Tone2Menu Tone2Win = new Tone2Menu();
     private Ton5Menu1 Tone5Win = new Ton5Menu1();
-    public static string[,] DataGridName = new string[2, 12]
-    {
-      {
-        "信道",
-        "接收频率",
-        "发射频率",
-        "接收亚音",
-        "发射亚音",
-        "扰    频",
-        " 功率",
-        "遇忙禁发 ",
-        "步进",
-        " 带宽",
-        "可选信令",
-        "信道名称"
-      },
-      {
-        "No. ",
-        "  Rx Fre",
-        "  Tx Fre",
-        "  Decode",
-        "  Encode",
-        "Scramble",
-        "Power",
-        "   B_Lock",
-        "Step",
-        "Wide",
-        " Signal",
-        " Ch Name"
-      }
-    };
-    public static string[,] TreedName = new string[2, 8]
-    {
-      {
-        "信道信息",
-        "频率信道",
-        "整机设定",
-        "DTMF",
-        "2 音",
-        "5 音",
-        "频段范围      ",
-        "收音机 "
-      },
-      {
-        "Channel  ",
-        "VFo　Ch ",
-        "Basic 　",
-        "DTMF",
-        "2Tone",
-        "5Tone",
-        "Frequency Rang",
-        "Radio "
-      }
-    };
+   
     private string[,] MessBoxName = new string[2, 4]
     {
       {
@@ -616,11 +563,7 @@ namespace _8890DTest
       Class1.SavOneChgSkipSttPro(0, this.dataGridView1.CurrentCell.RowIndex, this.GiFileName);
     }
 
-    private void SetGridHeadNamePro()
-    {
-      for (int index = 0; index <= 11; ++index)
-        this.dataGridView1.Columns[index].HeaderCell.Value = (object) ChInformtion.DataGridName[Class1.English_En, index];
-    }
+
 
     private void ReloadTreePro()
     {
@@ -628,12 +571,7 @@ namespace _8890DTest
       this.loadtreeViewPro();
     }
 
-    public void LanguageChgSetPro()
-    {
-      this.ReloadTreePro();
-      this.SetGridHeadNamePro();
-      this.LoadFileDataDisPro();
-    }
+
 
     private void ChInformtion_Load(object sender, EventArgs e)
     {
