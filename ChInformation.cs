@@ -15,8 +15,8 @@ namespace _8890DTest
 {
   public class ChInformtion : Form
   {
-    public string GiFileName = "8890D_TempFile.icf";
-    public string GiCurFileName = "8890D_TempFile.icf";
+    public string GiFileName = "TempFile.icf";
+    public string GiCurFileName = "TempFile.icf";
     public string GiFilePath;
     public bool GbFirstchg = true;
     private ChinfDetail ChWin = new ChinfDetail();
@@ -171,42 +171,40 @@ namespace _8890DTest
       DataGridViewTextBoxColumn acCode10 = new DataGridViewTextBoxColumn();
       DataGridViewTextBoxColumn acCode11 = new DataGridViewTextBoxColumn();
       DataGridViewTextBoxColumn acCode12 = new DataGridViewTextBoxColumn();
-      this.DataGridViewColumnAddPro(acCode1, ChInformtion.DataGridName[Class1.English_En, 0]);
+      this.DataGridViewColumnAddPro(acCode1, "№");
       acCode1.Width = 40;
-      this.DataGridViewColumnAddPro(acCode2, ChInformtion.DataGridName[Class1.English_En, 1]);
+      this.DataGridViewColumnAddPro(acCode2, "Прием");
       acCode2.Width = 80;
-      this.DataGridViewColumnAddPro(acCode3, ChInformtion.DataGridName[Class1.English_En, 2]);
+      this.DataGridViewColumnAddPro(acCode3, "Передача");
       acCode3.Width = 80;
-      this.DataGridViewColumnAddPro(acCode12, ChInformtion.DataGridName[Class1.English_En, 3]);
+      this.DataGridViewColumnAddPro(acCode12, "Субтон RX");
       acCode12.Width = 80;
-      this.DataGridViewColumnAddPro(acCode4, ChInformtion.DataGridName[Class1.English_En, 4]);
-      this.DataGridViewColumnAddPro(acCode5, ChInformtion.DataGridName[Class1.English_En, 5]);
-      this.DataGridViewColumnAddPro(acCode6, ChInformtion.DataGridName[Class1.English_En, 6]);
-      this.DataGridViewColumnAddPro(acCode7, ChInformtion.DataGridName[Class1.English_En, 7]);
+      this.DataGridViewColumnAddPro(acCode4, "Субтон TX");
+      this.DataGridViewColumnAddPro(acCode5, "Скремблер");
+      this.DataGridViewColumnAddPro(acCode6, "Мощность");
+      this.DataGridViewColumnAddPro(acCode7, "Блокировка передачи");
       acCode7.Width = 80;
-      this.DataGridViewColumnAddPro(acCode8, ChInformtion.DataGridName[Class1.English_En, 8]);
-      this.DataGridViewColumnAddPro(acCode9, ChInformtion.DataGridName[Class1.English_En, 9]);
-      this.DataGridViewColumnAddPro(acCode10, ChInformtion.DataGridName[Class1.English_En, 10]);
-      this.DataGridViewColumnAddPro(acCode11, ChInformtion.DataGridName[Class1.English_En, 11]);
+      this.DataGridViewColumnAddPro(acCode8, "Шаг");
+      this.DataGridViewColumnAddPro(acCode9, "Полоса модуляции");
+      this.DataGridViewColumnAddPro(acCode10, "Сигналинг");
+      this.DataGridViewColumnAddPro(acCode11, "Имя канала");
       acCode11.Width = 110;
       this.dataGridView1.Rows.Add(199);
-      int num = 0;
-      while (num <= 35)
-        ++num;
+
     }
 
     private void loadtreeViewPro()
     {
-      TreeNode node1 = new TreeNode(Class1.RadioName);
+      TreeNode node1 = new TreeNode("Группы настроек");
       this.treeView1.Nodes.Add(node1);
-      TreeNode node2 = new TreeNode(ChInformtion.TreedName[Class1.English_En, 0]);
-      TreeNode node3 = new TreeNode(ChInformtion.TreedName[Class1.English_En, 1]);
-      TreeNode node4 = new TreeNode(ChInformtion.TreedName[Class1.English_En, 2]);
-      TreeNode node5 = new TreeNode(ChInformtion.TreedName[Class1.English_En, 3]);
-      TreeNode node6 = new TreeNode(ChInformtion.TreedName[Class1.English_En, 4]);
-      TreeNode node7 = new TreeNode(ChInformtion.TreedName[Class1.English_En, 5]);
-      TreeNode node8 = new TreeNode(ChInformtion.TreedName[Class1.English_En, 6]);
-      TreeNode node9 = new TreeNode(ChInformtion.TreedName[Class1.English_En, 7]);
+      TreeNode node2 = new TreeNode("Выбранный канал");
+      TreeNode node3 = new TreeNode("Настройки VFO");
+      TreeNode node4 = new TreeNode("Настройки рации");
+      TreeNode node5 = new TreeNode("Настройки DTMF");
+      TreeNode node6 = new TreeNode("Настройки 2Т");
+      TreeNode node7 = new TreeNode("Настройки 5Т");
+      TreeNode node8 = new TreeNode("Частотные диапазоны");
+      TreeNode node9 = new TreeNode("FM-радио");
       node1.Nodes.Add(node2);
       node1.Nodes.Add(node3);
       node1.Nodes.Add(node4);
@@ -1161,108 +1159,136 @@ namespace _8890DTest
 
     private void InitializeComponent()
     {
-      this.groupBox3 = new GroupBox();
-      this.comboBox2 = new ComboBox();
-      this.comboBox1 = new ComboBox();
-      this.comboBox3 = new ComboBox();
-      this.textBox1 = new TextBox();
-      this.dataGridView1 = new DataGridView();
-      this.groupBox2 = new GroupBox();
-      this.treeView1 = new TreeView();
-      this.groupBox3.SuspendLayout();
-      ((ISupportInitialize) this.dataGridView1).BeginInit();
-      this.groupBox2.SuspendLayout();
-      this.SuspendLayout();
-      this.groupBox3.Controls.Add((Control) this.comboBox2);
-      this.groupBox3.Controls.Add((Control) this.comboBox1);
-      this.groupBox3.Controls.Add((Control) this.comboBox3);
-      this.groupBox3.Controls.Add((Control) this.textBox1);
-      this.groupBox3.Controls.Add((Control) this.dataGridView1);
-      this.groupBox3.Location = new Point(118, 0);
-      this.groupBox3.Name = "groupBox3";
-      this.groupBox3.Size = new Size(884, 529);
-      this.groupBox3.TabIndex = 1;
-      this.groupBox3.TabStop = false;
-      this.groupBox3.Enter += new EventHandler(this.groupBox3_Enter);
-      this.comboBox2.FormattingEnabled = true;
-      this.comboBox2.Location = new Point(709, 138);
-      this.comboBox2.Name = "comboBox2";
-      this.comboBox2.Size = new Size(121, 20);
-      this.comboBox2.TabIndex = 5;
-      this.comboBox2.Text = "Dcs";
-      this.comboBox2.Leave += new EventHandler(this.comboBox2_Leave);
-      this.comboBox2.KeyPress += new KeyPressEventHandler(this.comboBox2_KeyPress);
-      this.comboBox2.Click += new EventHandler(this.comboBox2_Click);
-      this.comboBox1.FormattingEnabled = true;
-      this.comboBox1.Location = new Point(709, 112);
-      this.comboBox1.Name = "comboBox1";
-      this.comboBox1.Size = new Size(121, 20);
-      this.comboBox1.TabIndex = 4;
-      this.comboBox1.Text = "Ctcss";
-      this.comboBox1.SelectedIndexChanged += new EventHandler(this.comboBox1_SelectedIndexChanged);
-      this.comboBox1.Leave += new EventHandler(this.comboBox1_Leave);
-      this.comboBox1.KeyPress += new KeyPressEventHandler(this.comboBox1_KeyPress);
-      this.comboBox1.Click += new EventHandler(this.comboBox1_Click);
-      this.comboBox3.FormattingEnabled = true;
-      this.comboBox3.Location = new Point(709, 164);
-      this.comboBox3.Name = "comboBox3";
-      this.comboBox3.Size = new Size(121, 20);
-      this.comboBox3.TabIndex = 3;
-      this.comboBox3.Text = "其它";
-      this.comboBox3.SelectedIndexChanged += new EventHandler(this.comboBox3_SelectedIndexChanged);
-      this.comboBox3.Leave += new EventHandler(this.comboBox3_Leave);
-      this.comboBox3.KeyPress += new KeyPressEventHandler(this.comboBox3_KeyPress);
-      this.textBox1.Location = new Point(709, 59);
-      this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new Size(100, 21);
-      this.textBox1.TabIndex = 2;
-      this.textBox1.Text = "频率输入\\名称";
-      this.textBox1.TextChanged += new EventHandler(this.textBox1_TextChanged);
-      this.textBox1.Leave += new EventHandler(this.textBox1_Leave);
-      this.textBox1.KeyPress += new KeyPressEventHandler(this.textBox1_KeyPress);
-      this.dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-      this.dataGridView1.Dock = DockStyle.Fill;
-      this.dataGridView1.Location = new Point(3, 17);
-      this.dataGridView1.MultiSelect = false;
-      this.dataGridView1.Name = "dataGridView1";
-      this.dataGridView1.RowTemplate.Height = 23;
-      this.dataGridView1.Size = new Size(878, 509);
-      this.dataGridView1.TabIndex = 0;
-      this.dataGridView1.Scroll += new ScrollEventHandler(this.dataGridView1_Scroll);
-      this.dataGridView1.CellClick += new DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-      this.dataGridView1.KeyDown += new KeyEventHandler(this.dataGridView1_KeyDown);
-      this.dataGridView1.KeyPress += new KeyPressEventHandler(this.dataGridView1_KeyPress);
-      this.groupBox2.Controls.Add((Control) this.treeView1);
-      this.groupBox2.Location = new Point(3, 0);
-      this.groupBox2.Name = "groupBox2";
-      this.groupBox2.Size = new Size(112, 529);
-      this.groupBox2.TabIndex = 0;
-      this.groupBox2.TabStop = false;
-      this.treeView1.Dock = DockStyle.Fill;
-      this.treeView1.Location = new Point(3, 17);
-      this.treeView1.Name = "treeView1";
-      this.treeView1.Size = new Size(106, 509);
-      this.treeView1.TabIndex = 0;
-      this.treeView1.MouseClick += new MouseEventHandler(this.treeView1_MouseClick);
-      this.treeView1.AfterSelect += new TreeViewEventHandler(this.treeView1_AfterSelect);
-      this.treeView1.MouseDown += new MouseEventHandler(this.treeView1_MouseDown);
-      this.treeView1.NodeMouseClick += new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
-      this.treeView1.Click += new EventHandler(this.treeView1_Click);
-      this.AutoScaleDimensions = new SizeF(6f, 12f);
-      this.AutoScaleMode = AutoScaleMode.Font;
-      this.ClientSize = new Size(1014, 541);
-      this.ControlBox = false;
-      this.Controls.Add((Control) this.groupBox3);
-      this.Controls.Add((Control) this.groupBox2);
-      this.Name = nameof (ChInformtion);
-      this.ShowIcon = false;
-      this.Load += new EventHandler(this.ChInformtion_Load);
-      this.FormClosing += new FormClosingEventHandler(this.ChInformtion_FormClosing);
-      this.groupBox3.ResumeLayout(false);
-      this.groupBox3.PerformLayout();
-      ((ISupportInitialize) this.dataGridView1).EndInit();
-      this.groupBox2.ResumeLayout(false);
-      this.ResumeLayout(false);
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.comboBox2);
+            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.comboBox3);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Location = new System.Drawing.Point(191, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(971, 573);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(709, 150);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 5;
+            this.comboBox2.Text = "Dcs";
+            this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
+            this.comboBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox2_KeyPress);
+            this.comboBox2.Leave += new System.EventHandler(this.comboBox2_Leave);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(709, 121);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.Text = "Ctcss";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
+            this.comboBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            this.comboBox1.Leave += new System.EventHandler(this.comboBox1_Leave);
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(709, 178);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 3;
+            this.comboBox3.Text = "其它";
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            this.comboBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox3_KeyPress);
+            this.comboBox3.Leave += new System.EventHandler(this.comboBox3_Leave);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(709, 64);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "频率输入\\名称";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(965, 554);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView1_Scroll);
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.treeView1);
+            this.groupBox2.Location = new System.Drawing.Point(3, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(182, 573);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Location = new System.Drawing.Point(3, 16);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(176, 554);
+            this.treeView1.TabIndex = 0;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.treeView1.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
+            this.treeView1.Click += new System.EventHandler(this.treeView1_Click);
+            this.treeView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.treeView1_MouseClick);
+            this.treeView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.treeView1_MouseDown);
+            // 
+            // ChInformtion
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1174, 586);
+            this.ControlBox = false;
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Name = "ChInformtion";
+            this.ShowIcon = false;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChInformtion_FormClosing);
+            this.Load += new System.EventHandler(this.ChInformtion_Load);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.ResumeLayout(false);
+
     }
   }
 }
