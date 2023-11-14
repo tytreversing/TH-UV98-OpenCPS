@@ -1036,8 +1036,8 @@ namespace _8890DTest
       this.ClientSize = new Size(714, 352);
       this.Controls.Add((Control) this.groupBox3);
       this.Controls.Add((Control) this.groupBox1);
-      this.Name = nameof (RadioSet);
-      this.Text = nameof (RadioSet);
+      this.Name = "RadioSet";
+      this.Text = "Настройки рации";
       this.Load += new EventHandler(this.RadioSet_Load);
       this.groupBox1.ResumeLayout(false);
       this.groupBox1.PerformLayout();
